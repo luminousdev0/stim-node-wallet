@@ -122,7 +122,9 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
+ app.get('/', homeController.index);
+app.get('/terms', homeController.terms);
+app.get('account/privacy', homeController.privacy);
 app.get('/login', userController.getLogin);
 app.post('/login', function (req, res, next) {
         recaptcha.verify(req, function (error) {
@@ -205,6 +207,14 @@ app.listen(app.get('port'), () => {
 });
 
 module.exports = app;
+
+app.get('/terms/', function(req, res) {
+  res.render('terms', {title: "Terms and Conditions"});
+});
+
+app.get('/privacy/', function(req, res) {
+  res.render('privacy', {title: "Privacy Policy"});
+});
 
 //The 404 Route (ALWAYS Keep this as the last route)
 app.get('*', function (req, res) {

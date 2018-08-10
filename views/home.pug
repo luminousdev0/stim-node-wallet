@@ -3,14 +3,14 @@ extends layout
 block content
   
   .page-header
-  div.carousel(id='myslider')
-    div.carousel-inner
-       div.item-active
-            .wallettitle1(align='center')
-              img(src='./img/stimlogo1.png', alt='Stim')
-              .carousel-caption
+  
+      .wallettitle1(align='center')
+              
+          img(src='./img/stimlogo1.png', alt='Stim')
                 
-  hr
+              
+                
+  
   .row
     .col-sm-6
       h2 Fast & Secure
@@ -18,7 +18,7 @@ block content
       p
         if user
         else
-          a.btn.btn-primary(href='/terms', role='button') Sign Up! »
+          a.btn.btn-primary(href='./terms', role='button') Sign Up! »
     .col-sm-6
       h2 What is Stim?
       p
