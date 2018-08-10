@@ -3,7 +3,7 @@ Stim NodeJS Web Wallet
 =======================
 
 
-Node Stim Wallet - A NodeJS/MongoDB powered stimd Web Wallet.
+Stim Node Wallet - A NodeJS/MongoDB powered stimd Web Wallet.
 
 Send and Receive Funds, Create new addresses, View Transactions, Edit your account, and more!
 
